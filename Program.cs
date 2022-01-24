@@ -9,7 +9,8 @@ namespace guessingGame
 
              
             Console.Write("Can you guess the secret number?");
-for (int i = 0; i < 4; i++){
+
+        for (int i = 0; i < 4; i++){
 
             int num = Convert.ToInt32(Console.ReadLine());
                 
@@ -17,10 +18,11 @@ for (int i = 0; i < 4; i++){
 
            
             if(num == secretNum){
-                Console.Write("You guessed the number");
+                Console.Write("You guessed the number correct!!!");
+                break;
 
                            } else {
-            Console.Write(" Wrong! try again");
+            Console.WriteLine(" Wrong! try again" + $"Your Guess {i +1}");
             
             } 
             }        
