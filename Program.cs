@@ -7,10 +7,11 @@ namespace guessingGame
         public static void Main(string[] args)
         {
 
- Console.Write("What difficulty Level do you want, easy, medium, hard? ");
+ Console.Write("What difficulty Level do you want, easy, medium, hard, cheater? ");
 string easy = "easy";
 string medium = "medium";
 string hard = "hard";
+string cheater = "cheater";
 string Answer = Console.ReadLine();
 
  if(easy == Answer){
@@ -95,11 +96,38 @@ int secretNum = new Random().Next(1, 100);
                    Console.WriteLine("Your guess is to high");
              }
  }
+ 
+ 
+} else if(cheater == Answer) {
+    Console.WriteLine("Can you guess the secret number between 1 - 100? Cheater gets all the guesses");
+    int secretNum = new Random().Next(1, 100);
+  
+        while(true){
+
+           int num = Convert.ToInt32(Console.ReadLine());
+           if(num == secretNum){
+                
+                Console.Write($"You guessed the number correct, {secretNum}!!!");
+                break;
+
+           }   else {
+
+            Console.WriteLine(" Wrong! try again");
+            Console.WriteLine($"{secretNum}");
+//                         
+        } if(secretNum > num ){
+
+                 Console.WriteLine("Your guess is to low");
+
+            } else  if (secretNum < num ){
+                   Console.WriteLine("Your guess is to high");
+             }
+
+        }
 }
         }
-    }
-}
-
+    }}
+    
 
        
    
