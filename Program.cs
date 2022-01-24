@@ -8,21 +8,23 @@ namespace guessingGame
         {
 
              
-            Console.Write("Can you guess the secret number?");
+            Console.Write("Can you guess the secret number? ");
+ int secretNum = new Random().Next(1, 99);
+
 
         for (int i = 0; i < 4; i++){
 
             int num = Convert.ToInt32(Console.ReadLine());
                 
-            int secretNum = 42;
-
+           
+                
            
             if(num == secretNum){
-                Console.Write("You guessed the number correct!!!");
+                Console.Write($"You guessed the number correct!!!{secretNum}");
                 break;
 
                            } else {
-            Console.WriteLine(" Wrong! try again" + $"Your Guess {i +1}");
+            Console.WriteLine(" Wrong! try again" + $"Your Guess {-i +4}!" + $"{secretNum}");
             
             } 
             }        
